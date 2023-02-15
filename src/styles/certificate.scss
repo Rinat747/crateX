@@ -1,0 +1,57 @@
+.certificate{
+  padding: 120px 0;
+  position: relative;
+  &__content{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info{
+    width: 35%;
+  }
+  &__text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #424551;
+    margin: 48px 0 32px;
+  }
+  &__img{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    z-index: 3;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .certificate__content{
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+  }
+  .certificate__info{
+    width: 100%;
+    text-align: center;
+  }
+  .certificate__img{
+    position: static;
+    width: 70%;
+  }
+}
+
+
+@media (max-width: 676px){
+    .certificate{
+      padding: 90px 0;
+      &__subtitle{
+        font-size: 12px;
+      }
+      &__title{
+        font-size: 30px;
+      }
+      &__text{
+        font-size: 14px;
+      }
+    }
+}

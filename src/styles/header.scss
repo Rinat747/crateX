@@ -1,0 +1,135 @@
+.header {
+  padding-top: 20px;
+  background: linear-gradient(55.95deg, #FF3F3A20 0%, #F75E0520 100%);
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    column-gap: 60px;
+  }
+  &__menu {
+    display: flex;
+    column-gap: 40px;
+    &-link {
+      font-weight: 700;
+      font-size: 16px;
+      color: #424551;
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+  }
+  &__user {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    &-link {
+      font-weight: 700;
+      font-size: 16px;
+      color: #424551;
+    }
+  }
+  &__burger{
+    width: 30px;
+    height: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &-line{
+      display: flex;
+      width: 100%;
+      height: 2px;
+      background: #1E212C;
+      position: relative;
+      &::before{
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #1E212C;
+        position: absolute;
+        left: 0;
+        top: -6px;
+      }
+      &::after{
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #1E212C;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .header__btn{
+    padding: 17px 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header__nav{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    min-height: 50vh;
+    z-index: 6;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 40%;
+    background: #FFFFFF;
+    padding: 30px;
+    & .header__left{
+      flex-direction: column;
+    }
+    & .header__menu{
+      text-align: center;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+    & .header__right{
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+  .header__nav_active{
+    right: 0;
+    transition: 0.5s;
+  }
+  .header__burger{
+    display: flex;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 16;
+  }
+  
+  .header__burger_active{
+    span{
+      background: #FFFFFF;
+      &::before{
+        width: 30px;
+        top: 0;
+        transform: rotate(-45deg);
+      }
+      &::after{
+        width: 30px;
+        top: 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

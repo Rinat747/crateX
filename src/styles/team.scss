@@ -1,0 +1,108 @@
+.team{
+  padding: 162px 0 180px;
+  background: #F4F5F7;
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+  }
+  &__btns{
+    display: flex;
+    align-items: flex-end;
+    column-gap: 20px;
+  }
+  &__btn{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: transparent;
+    border: none;
+    svg path{
+      fill: #424551;;
+    }
+    &:hover{
+      background: #FF3F3A;
+      svg path{
+        fill: #FFFFFF;;
+      }
+    }
+  }
+  &__card{
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+    transition: 1s all;
+    &:hover{
+      .team__card-icons{
+        display: flex;
+        transition: 1s;
+      }
+    }
+    &-person{
+      background: #FFCF2D;
+      border-radius: 4px;
+      position: relative;
+      height: 340px;
+    }
+    &-img{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &-icons{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 20px ;
+      display: none;
+      justify-content: flex-end;
+      align-items: flex-end;
+      column-gap: 13px;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(30, 33, 44, 0) 43.9%, rgba(30, 33, 44, 0.03) 55.21%, rgba(30, 33, 44, 0.33) 68.73%, rgba(30, 33, 44, 0.56) 76.17%, rgba(30, 33, 44, 0.768225) 83.75%, rgba(30, 33, 44, 0.92) 91.49%, #1E212C 100%);
+      border-radius: 4px;
+    }
+    &-icon{
+      svg path{
+        fill: #9A9CA5;
+        transition: 0.5s all;
+      }
+      &:hover{
+        svg path{
+          fill: #fff;
+        }
+      }
+    }
+    &-title{
+      font-weight: 700;
+      font-size: 20px;
+      color: #424551;
+      margin: 16px 0 4px;
+    }
+    &-desc{
+      font-weight: 400;
+      font-size: 16px;
+      color: #787A80;
+    }
+  }
+}
+
+
+@media (max-width: 676px) {
+  .team{
+    padding: 120px 0 130px;
+    & .subtitle{
+      font-size: 12px;
+    }
+    & .title{
+      font-size: 35px;
+    }
+  }
+}
